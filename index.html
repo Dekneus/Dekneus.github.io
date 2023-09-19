@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <section class="button-container header-buttons">
+            <button class="nav-button" onclick="goToPage('home.html')">Home</button>
+            <button class="nav-button" onclick="goToPage('vakken.html')">Vakken</button>
+        </section>
+
+        <header>
+            <h1>Home</h1>
+        </header>
+        <section>
+            <article>
+                <h2 id="Title"></h2>
+                <p id="Desc"></p>
+            </article>
+        </section>
+        <footer></footer>
+    </div>
+
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
