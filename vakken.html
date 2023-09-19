@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <section class="button-container header-buttons">
-            <button class="nav-button" onclick="goToPage('home.html')">Home</button>
+            <button class="nav-button" onclick="goToPage('index.html')">Home</button>
             <button class="nav-button" onclick="goToPage('vakken.html')">Vakken</button>
         </section>
 
@@ -42,6 +42,11 @@
         <footer></footer>
     </div>
 
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 

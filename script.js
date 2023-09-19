@@ -4,19 +4,19 @@ const VakDescription = document.getElementById('Desc');
 
 const buttonContent = [
     { title: "LOB", description: "LOB is een chill vak" },
-    { title: "Database", description: "Databse belangrijk vak" },
-    { title: "Engels", description: "Engels is een makkelijk vak" },
+    { title: "Database", description: "Database https://www.youtube.com/watch?v=MtPBQ4BhzOY" },
+    { title: "Engels", description: "Inglis is easy vak" },
     { title: "GIT", description: "GIT.. We hebben het niet over GIT.." },
     { title: "HTML/CSS", description: "HTML/CSS is een episch vak" },
     { title: "IPFS", description: "IPFS is een bijzonder vak" },
-    { title: "Linux", description: "Linux is een vak voor Discord moderators" },
+    { title: "Linux", description: "Linux is een vak voor kelder bewoners" },
     { title: "Nederlands", description: "Nederlands is een kwalitatief uitermate teleurstellend vak" },
-    { title: "Rekenen", description: "Rekenen.. bro ik heb geen zin om terug te gaan naar groep 8 ;(" },
-    { title: "SCRUM", description: "SCRUM is ok vak I guess" },
+    { title: "Rekenen", description: "Two plus two is four, minus one thats three quick maths" },
+    { title: "SCRUM", description: "SCRUM is n ok vak I guess" },
     { title: "SLB", description: "SLB ik begin carpeltunnel te krijgen help" },
     { title: "Zakelijke Communicatie", description: "Zakelijke communicatie. Waarom zit dit niet bij Nederlands..?" },
-    { title: "Burgerschap", description: "Burgerschap is het matigste vak" },
-    { title: "Greenfoot", description: "Greenfoot is gamemaker voor volwassenen" },
+    { title: "Burgerschap", description: "Burgerschap ..." },
+    { title: "Greenfoot", description: "Greenfoot is srs gewoon gamemaker voor volwassenen" },
 ];
 
 let selectedButton = null;
