@@ -1,41 +1,59 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML/CSS 1</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <style>
-        article {
-            width: 100%;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Pagina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <section class="button-container header-buttons">
-            <button class="nav-button" onclick="goToPage('index.html')">Home</button>
-            <button class="nav-button" onclick="goToPage('vakken.html')">Vakken</button>
-        </section>
+    <header>
+        <h1 id="typewriter-title">Home Pagina<span id="underscore"></span></h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
 
-        <header>
-            <h1>Home</h1>
-        </header>
-        <section>
-            <article>
-                <h2 id="Title"></h2>
-                <p id="Desc"></p>
-            </article>
-        </section>
-        <footer></footer>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="vakken.html">Vakken</a>
+        <a href="">F.A.Q</a>
+        <a href="">Review</a>
+        <a href="">Sitemap</a>
+    </nav>
+    <div class="content">
+        <h2>Over Mij</h2>
+        <p>
+            ¿Hola amigo como estas? Ik ben Sam de Heus, en dit is wat interessante informatie over mij.
+        </p>
+        <h3>Favoriete Band:</h3>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="rad_m00ww29skw1qh55mao1_500.jpg" alt="Favoriete band">
+            </div>
+            <div>
+                <p>
+                   Mijn favoriete band op dit moment is de Radwimps (dit veranderd nogal vaak). De Radwimps is een rockband die vooral bekend is door hun muziek voor verschillende grote CoMix Wave Films hits zoals award-winnende titels <a href="https://nl.wikipedia.org/wiki/Your_Name._(film)" target=”_blank”>Your Name</a> en <a  href="https://nl.wikipedia.org/wiki/Suzume" target=”_blank”>Suzume</a></p>
+            </div>
+        </div>
+        <h3>Favoriete Games:</h3>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="VALORANT-Jett-Agent-Guide.jpg" alt="Favoriete game">
+            </div>
+            <div>
+
+                <p>
+                    Ik ben niet zo'n hele actieve gamer meer (ik ben vooral serie verslaafd op het moment). Maar ik heb uiteraard wel een aantal favoriete games. Op nummer 1 staat voor mij op dit moment de game 'Valorant' wat in mijn ogen de beste competitive shooter van het moment is. Verder ben ik een fan van Horizon Zero Dawn en de Stronghold series. Maar volgensmij mag ik deze lijst wettelijk gezien niet maken zonder Minecraft te noemen.
+                </p>
+            </div>
+        </div>
     </div>
-
-    <script>
-        function goToPage(url) {
-            window.location.href = url;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
+
+
+

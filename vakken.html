@@ -1,53 +1,55 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML/CSS 1</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vakken</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <section class="button-container header-buttons">
-            <button class="nav-button" onclick="goToPage('index.html')">Home</button>
-            <button class="nav-button" onclick="goToPage('vakken.html')">Vakken</button>
-        </section>
-
-        <header>
-            <h1>Vakken</h1>
-        </header>
-        <section>
-            <nav class="button-container">
-                <button class="nav-button">LOB</button>
-                <button class="nav-button">Database</button>
-                <button class="nav-button">Engels</button>
-                <button class="nav-button">GIT</button>
-                <button class="nav-button">HTML/CSS</button>
-                <button class="nav-button">IPFS</button>
-                <button class="nav-button">Linux</button>
-                <button class="nav-button">Nederlands</button>
-                <button class="nav-button">Rekenen</button>
-                <button class="nav-button">SCRUM</button>
-                <button class="nav-button">SLB</button>
-                <button class="nav-button">Zakelijke Communicatie</button>
-                <button class="nav-button">Burgerschap</button>
-                <button class="nav-button">Greenfoot</button>
-            </nav>
-            <article>
-                <h2 id="Title"></h2>
-                <p id="Desc"></p>
-            </article>
-        </section>
-        <footer></footer>
+    <header>
+        <h1 id="typewriter-title">Vakken<span id="underscore"></span></h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+        <div>
+            <section class="button-container header-buttons">
+                 <nav>
+            <a href="index.html">Home</a>
+            <a href="vakken.html">Vakken</a>
+            <a href="">F.A.Q</a>
+            <a href="">Review</a>
+            <a href="">Sitemap</a>
+        </nav>
+            </section>
+            <section>
+                <article>
+                    <h2 id="Title"></h2>
+                    <p id="Desc"></p>
+                    <div class="article-buttons">
+                        <button class="article-button">LOB</button>
+                        <button class="article-button">Database</button>
+                        <button class="article-button">Engels</button>
+                        <button class="article-button">GIT</button>
+                        <button class="article-button">HTML/CSS</button>
+                        <button class="article-button">IPFS</button>
+                        <button class="article-button">Linux</button>
+                        <button class="article-button">Nederlands</button>
+                        <button class="article-button">Rekenen</button>
+                        <button class="article-button">SCRUM</button>
+                        <button class="article-button">SLB</button>
+                        <button class="article-button">Zakelijke communicatie</button>
+                        <button class="article-button">Burgerschap</button>
+                        <button class="article-button">Greenfoot</button>
+                    </div>
+                </article>
+                
+            </section>
+            <footer></footer>
     </div>
-
-    <script>
-        function goToPage(url) {
-            window.location.href = url;
-        }
-    </script>
     <script src="script.js"></script>
 </body>
-
 </html>

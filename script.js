@@ -1,8 +1,8 @@
-const buttons = document.querySelectorAll('.button-container:not(.header-buttons) button');
-const VakTitel = document.getElementById('Title');
-const VakDescription = document.getElementById('Desc');
+let articleButtons = document.querySelectorAll('.article-buttons button');
+let VakTitel = document.getElementById('Title');
+let VakDescription = document.getElementById('Desc');
 
-const buttonContent = [
+let buttonContent = [
     { title: "LOB", description: "LOB is een chill vak" },
     { title: "Database", description: "Database https://www.youtube.com/watch?v=MtPBQ4BhzOY" },
     { title: "Engels", description: "Inglis is easy vak" },
@@ -21,14 +21,13 @@ const buttonContent = [
 
 let selectedButton = null;
 
-buttons.forEach((button, index) => {
+articleButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         if (selectedButton) {
-            selectedButton.style.backgroundColor = "#bbbbbb";
+            selectedButton.style.backgroundColor = "#8d1c7c";
             selectedButton.style.transform = "scale(1)";
         }
 
-        button.style.backgroundColor = getRandomColor();
         button.style.transform = "scale(1.1)";
         selectedButton = button;
 
@@ -44,7 +43,7 @@ buttons.forEach((button, index) => {
 
     button.addEventListener('mouseout', () => {
         if (button !== selectedButton) {
-            button.style.backgroundColor = "#bbbbbb";
+            button.style.backgroundColor = "#8d1c7c";
         }
     });
 });
@@ -57,3 +56,32 @@ function getRandomColor() {
     }
     return color;
 }
+
+function toggleMenu() {
+    var menuIcon = document.querySelector('.menu-icon');
+    var nav = document.querySelector('nav');
+    menuIcon.classList.toggle('active');
+    nav.classList.toggle('active');
+}
+
+let title = document.getElementById('typewriter-title');
+let text = title.innerText;
+let i = 0;
+let isDeleting = false;
+
+function type() {
+    if (i <= text.length && !isDeleting) {
+        title.innerHTML = text.substring(0, i) + '<span id="underscore">_</span>';
+        i++;
+        setTimeout(type, 100);
+    } else if (i >= 0 && isDeleting) {
+        title.innerHTML = text.substring(0, i) + '<span id="underscore">_</span>';
+        i--;
+        setTimeout(type, 50);
+    } else {
+        isDeleting = !isDeleting;
+        setTimeout(type, 1000);
+    }
+}
+
+setTimeout(type, 1000);
