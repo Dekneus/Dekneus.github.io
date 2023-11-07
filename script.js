@@ -1,87 +1,157 @@
-let articleButtons = document.querySelectorAll('.article-buttons button');
-let VakTitel = document.getElementById('Title');
-let VakDescription = document.getElementById('Desc');
-
-let buttonContent = [
-    { title: "LOB", description: "LOB is een chill vak" },
-    { title: "Database", description: "Database https://www.youtube.com/watch?v=MtPBQ4BhzOY" },
-    { title: "Engels", description: "Inglis is easy vak" },
-    { title: "GIT", description: "GIT.. We hebben het niet over GIT.." },
-    { title: "HTML/CSS", description: "HTML/CSS is een episch vak" },
-    { title: "IPFS", description: "IPFS is een bijzonder vak" },
-    { title: "Linux", description: "Linux is een vak voor kelder bewoners" },
-    { title: "Nederlands", description: "Nederlands is een kwalitatief uitermate teleurstellend vak" },
-    { title: "Rekenen", description: "Two plus two is four, minus one thats three quick maths" },
-    { title: "SCRUM", description: "SCRUM is n ok vak I guess" },
-    { title: "SLB", description: "SLB ik begin carpeltunnel te krijgen help" },
-    { title: "Zakelijke Communicatie", description: "Zakelijke communicatie. Waarom zit dit niet bij Nederlands..?" },
-    { title: "Burgerschap", description: "Burgerschap ..." },
-    { title: "Greenfoot", description: "Greenfoot is srs gewoon gamemaker voor volwassenen" },
+const fonts = [
+    'Arial, sans-serif',
+    'Times New Roman',
+    'Courier New',
+    'Georgia',
+    'Verdana'
 ];
 
-let selectedButton = null;
+let fontIndex = 0;
+let currentMemberIndex = 1;
 
-articleButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        if (selectedButton) {
-            selectedButton.style.backgroundColor = "#8d1c7c";
-            selectedButton.style.transform = "scale(1)";
+function changeFont() {
+    const discountText = document.querySelector('.discount-text');
+    if (discountText) {
+        discountText.style.fontFamily = fonts[fontIndex];
+        fontIndex = (fontIndex + 1) % fonts.length;
+    }
+}
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function adjustBannerHeight() {
+    const banner = document.querySelector('.banner');
+    const windowHeight = window.innerHeight;
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    const newBannerHeight = windowHeight - headerHeight;
+    banner.style.height = newBannerHeight + 'px';
+}
+
+function closeMenuOnScroll() {
+    if (isMenuOpen && window.scrollY > scrollThreshold) {
+        isMenuOpen = false;
+        menu.classList.remove('show-nav');
+    }
+}
+
+function setMemberContent(content) {
+    const member2 = document.querySelector('.team-member.member2');
+    if (member2) {
+        member2.querySelector('img').src = content.image;
+        member2.querySelector('h2').textContent = content.name;
+        member2.querySelector('p').textContent = content.experience;
+        member2.querySelector('.bold-text').textContent = content.role;
+    }
+}
+
+const member1Content = {
+    image: 'images/member1.png',
+    name: 'Henk-jan Schoonbeek',
+    experience: 'Kapper met 15+ jaar ervaring en eigenaar van kapperszaak Haircut™.',
+    role: 'Eigenaar'
+};
+
+const member2Content = {
+    image: 'images/member2.png',
+    name: 'Petra Plasman',
+    experience: 'Onze vrouwelijke kapster met 29+ jaar ervaring in de industrie.',
+    role: 'Senior stylist'
+};
+
+const member3Content = {
+    image: 'images/member3.png',
+    name: 'Aart van de Vaart',
+    experience: 'Snelle kapper met een knappe kop met 3+ jaar ervaring.',
+    role: 'Junior stylist'
+};
+
+function changeMember(step) {
+    if (step === -1) {
+        currentMemberIndex = (currentMemberIndex - 1 + 3) % 3;
+    } else {
+        currentMemberIndex = (currentMemberIndex + 1) % 3;
+    }
+
+    if (currentMemberIndex === 0) {
+        setMemberContent(member1Content);
+    } else if (currentMemberIndex === 1) {
+        setMemberContent(member2Content);
+    } else if (currentMemberIndex === 2) {
+        setMemberContent(member3Content);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopButton = document.getElementById("scroll-to-top");
+
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
         }
-
-        button.style.transform = "scale(1.1)";
-        selectedButton = button;
-
-        VakTitel.textContent = buttonContent[index].title;
-        VakDescription.textContent = buttonContent[index].description;
     });
 
-    button.addEventListener('mouseover', () => {
-        if (button !== selectedButton) {
-            button.style.backgroundColor = getRandomColor();
-        }
+    scrollToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     });
 
-    button.addEventListener('mouseout', () => {
-        if (button !== selectedButton) {
-            button.style.backgroundColor = "#8d1c7c";
-        }
+    const teamMembers = document.querySelectorAll('.team-member');
+    const prevMemberButton = document.getElementById('prev-member');
+    const nextMemberButton = document.getElementById('next-member');
+
+    prevMemberButton.addEventListener('click', () => {
+        changeMember(-1);
+    });
+
+    nextMemberButton.addEventListener('click', () => {
+        changeMember(1);
     });
 });
 
-function getRandomColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+setInterval(changeFont, 500);
+
+const scrollArrow = document.getElementById('scroll-arrow');
+scrollArrow.addEventListener('click', function (event) {
+    event.preventDefault();
+    scrollToSection('main');
+});
+
+const banner = document.querySelector('.banner');
+banner.addEventListener('click', function (event) {
+    if (event.target !== scrollArrow) {
+        window.location.href = 'boeken.html';
     }
-    return color;
-}
+});
 
-function toggleMenu() {
-    var menuIcon = document.querySelector('.menu-icon');
-    var nav = document.querySelector('nav');
-    menuIcon.classList.toggle('active');
-    nav.classList.toggle('active');
-}
+document.getElementById('about-link').addEventListener('click', function (event) {
+    event.preventDefault();
+    scrollToSection('main');
+});
 
-let title = document.getElementById('typewriter-title');
-let text = title.innerText;
-let i = 0;
-let isDeleting = false;
+document.getElementById('opening-hours-link').addEventListener('click', function (event) {
+    event.preventDefault();
+    scrollToSection('opening-hours-section');
+});
 
-function type() {
-    if (i <= text.length && !isDeleting) {
-        title.innerHTML = text.substring(0, i) + '<span id="underscore">_</span>';
-        i++;
-        setTimeout(type, 100);
-    } else if (i >= 0 && isDeleting) {
-        title.innerHTML = text.substring(0, i) + '<span id="underscore">_</span>';
-        i--;
-        setTimeout(type, 50);
-    } else {
-        isDeleting = !isDeleting;
-        setTimeout(type, 1000);
-    }
-}
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
+let isMenuOpen = false;
+let scrollThreshold = 200;
 
-setTimeout(type, 1000);
+hamburgerMenu.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    menu.classList.toggle('show-nav', isMenuOpen);
+});
+
+window.addEventListener('resize', adjustBannerHeight);
+window.addEventListener('load', adjustBannerHeight);
+window.addEventListener('scroll', closeMenuOnScroll);

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boek een afspraak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-header">
+            <p>• Kalverbos 1B, 4001 AJ Tiel •</p>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="nav-toggle">
+            </div>
+            <ul class="nav menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#main">OVER ONS</a></li>
+                <li><a href="boeken.html">BOEK NU</a></li>
+                <li><a href="prijzen.html">PRIJZEN</a></li>
+                <li><a href="index.html#opening-hours-section">OPENINGSTIJDEN</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </header>
+        <div class="booking-section">
+            <h2>Boek een afspraak</h2>
+            <form action="afspraakgemaakt.html">
+                <label for="service">Kies een service:</label>
+                <select name="service" id="service" required>
+                    <option value="haircut">Knippen</option>
+                    <option value="coloring">Haar kleuren</option>
+                    <option value="styling">Styling</option>
+                </select>
+                <label for="name">Naam:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="date">Datum:</label>
+                <input type="date" name="date" id="date" required>
+                <label for="time">Tijd:</label>
+                <input type="time" name="time" id="time" required>
+                <input type="submit" value="Verzenden">
+            </form>
+        </div>
+        <div class="epicline-section">
+            <h2>Bel met kapperszaak Haircut&trade; op <strong>0611369420</strong></h2>
+        </div>
+        <div class="epictrianglebg-section">
+            <div class="epictriangle"></div>
+        </div>
+        <div class="prefooter-section">
+            <div class="footer-column">
+                <p>Onze locaties</p>
+                <ul>
+                    <li><a href="https://www.google.com/maps/place/Kalverbos+1B,+4001+AJ+Tiel">Tiel</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p>Links</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="boeken.html">Boek nu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="prijzen.html">Prijzen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p>Over ons</p>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Vacatures</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <p>Extra Info</p>
+                <ul>
+                    <li><a href="#">Nieuws</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Sam de Heus - 2023</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

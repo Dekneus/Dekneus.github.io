@@ -1,59 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Pagina</title>
+    <title>Kapperszaak Haircut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1 id="typewriter-title">Home Pagina<span id="underscore"></span></h1>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <div class="wrapper">
+        <div class="top-header">
+            <p>• Kalverbos 1B, 4001 AJ Tiel •</p>
         </div>
-    </header>
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="nav-toggle">
+                <div class="hamburger"></div>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="nav menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#main" id="about-link">OVER ONS</a></li>
+                    <li><a href="boeken.html">BOEK NU</a></li>
+                    <li><a href="prijzen.html">PRIJZEN</a></li>
+                    <li><a href="#opening-hours-section" id="opening-hours-link">OPENINGSTIJDEN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="vakken.html">Vakken</a>
-        <a href="">F.A.Q</a>
-        <a href="">Review</a>
-        <a href="">Sitemap</a>
-    </nav>
-    <div class="content">
-        <h2>Over Mij</h2>
-        <p>
-            ¿Hola amigo como estas? Ik ben Sam de Heus, en dit is wat interessante informatie over mij.
-        </p>
-        <h3>Favoriete Band:</h3>
-        <div class="image-grid">
-            <div class="image-container">
-                <img src="rad_m00ww29skw1qh55mao1_500.jpg" alt="Favoriete band">
-            </div>
-            <div>
-                <p>
-                   Mijn favoriete band op dit moment is de Radwimps (dit veranderd nogal vaak). De Radwimps is een rockband die vooral bekend is door hun muziek voor verschillende grote CoMix Wave Films hits zoals award-winnende titels <a href="https://nl.wikipedia.org/wiki/Your_Name._(film)" target=”_blank”>Your Name</a> en <a  href="https://nl.wikipedia.org/wiki/Suzume" target=”_blank”>Suzume</a></p>
-            </div>
+        <div class="banner">
+            <h2 class="discount-text">Tijdelijk 10% korting!</h2>
+            <img src="images/bannertext.png" class="banner-image">
+            <div class="scroll-down-arrow" id="scroll-arrow"></div>
         </div>
-        <h3>Favoriete Games:</h3>
-        <div class="image-grid">
-            <div class="image-container">
-                <img src="VALORANT-Jett-Agent-Guide.jpg" alt="Favoriete game">
-            </div>
-            <div>
 
-                <p>
-                    Ik ben niet zo'n hele actieve gamer meer (ik ben vooral serie verslaafd op het moment). Maar ik heb uiteraard wel een aantal favoriete games. Op nummer 1 staat voor mij op dit moment de game 'Valorant' wat in mijn ogen de beste competitive shooter van het moment is. Verder ben ik een fan van Horizon Zero Dawn en de Stronghold series. Maar volgensmij mag ik deze lijst wettelijk gezien niet maken zonder Minecraft te noemen.
-                </p>
+        <div id="main" class="main-section">
+            <h2>Over ons</h2>
+            <p>Welkom bij kapperszaak Haircut&trade;, de Kapper die staat voor het leveren van kwaliteit gemixt met
+                creativiteit en die op de hoogte is van de komende trends met uiteenlopende coupes, en waar alle
+                medewerkers continu getraind worden in de eigen LaVie Academy en bij Kevin Murphy, Moroccanoil,
+                Schwarzkopf, STMNT om ervoor te zorgen dat u datgene uitstraalt wat u graag wilt.</p>
+        </div>
+
+        <div class="team-container">
+            <div class="team-members-container">
+                <div class="team-member member1">
+                    <div class="circle-container">
+                        <img src="images/member1.png" alt="Member 1">
+                    </div>
+                    <div class="member-info">
+                        <h2>Henk-jan Schoonbeek</h2>
+                        <p>Kapper met 15+ jaar ervaring en eigenaar van kapperszaak Haircut&trade;.</p>
+                        <p class="bold-text">Eigenaar</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="images/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://twitter.com" target="_blank">
+                                <img src="images/twitter.png" alt="Twitter">
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank">
+                                <img src="images/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member member2">
+                    <div class="circle-container">
+                        <img src="images/member2.png" alt="Member 2">
+                    </div>
+                    <div class="member-info">
+                        <h2>Petra Plasman</h2>
+                        <p>Onze vrouwelijke kapster met 29+ jaar ervaring in de industrie.</p>
+                        <p class="bold-text">Senior stylist</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="images/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://twitter.com" target="_blank">
+                                <img src="images/twitter.png" alt="Twitter">
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank">
+                                <img src="images/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member member3">
+                    <div class="circle-container">
+                        <img src="images/member3.png" alt="Member 3">
+                    </div>
+                    <div class="member-info">
+                        <h2>Aart van de Vaart</h2>
+                        <p>Snelle kapper met een knappe kop met 3+ jaar ervaring.</p>
+                        <p class="bold-text">Junior stylist</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img src="images/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://twitter.com" target="_blank">
+                                <img src="images/twitter.png" alt="Twitter">
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank">
+                                <img src="images/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-navigation">
+                <button id="prev-member" class="mobile-button">&lt;</button>
+                <button id="next-member" class="mobile-button">&gt;</button>
             </div>
         </div>
+
+        <div id="opening-hours-section" class="opening-hours-section">
+            <table class="opening-hours-table">
+                <p class="opening-hours-text">Openings<strong>tijden</strong></p>
+                <tr>
+                    <td class="day">Maandag</td>
+                    <td class="time">09:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="day">Dinsdag</td>
+                    <td class="time">09:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="day">Woensdag</td>
+                    <td class="time">09:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="day">Donderdag</td>
+                    <td class="time">09:00 - 20:00</td>
+                </tr>
+                <tr>
+                    <td class="day">Vrijdag</td>
+                    <td class="time">09:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td class="day">Zaterdag</td>
+                    <td class="time">09:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td class="day">Zondag</td>
+                    <td class="time">Gesloten</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="epicline-section">
+            <h2>Bel met kapperszaak Haircut&trade; op <strong>0611369420</strong></h2>
+        </div>
+
+        <div class="epictrianglebg-section">
+            <div class="epictriangle"></div>
+        </div>
+
+        <div class="prefooter-section">
+            <div class="footer-column">
+                <p>Onze locaties</p>
+                <ul>
+                    <li><a href="https://www.google.com/maps/place/Kalverbos+1B,+4001+AJ+Tiel">Tiel</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <p>Links</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="boeken.html">Boek nu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="prijzen.html">Prijzen</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <p>Over ons</p>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Vacatures</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <p>Extra Info</p>
+                <ul>
+                    <li><a href="#">Nieuws</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="scroll-to-top" class="scroll-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <footer>
+            &copy; Sam de Heus - 2023
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
-
-
-
